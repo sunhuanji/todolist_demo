@@ -1,5 +1,6 @@
 class TodoListsController < ApplicationController
   before_action :set_todo_list, only: [:show, :edit, :update, :destroy]
+  protect_from_forgery with: :null_session
 
   # GET /todo_lists
   # GET /todo_lists.json
